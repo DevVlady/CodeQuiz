@@ -19,3 +19,11 @@
 //One of the buttons is "GO BACK" which will take them to the main page
 //The other button they will have as an option to click on is "CLEAR LEADERBOARD"
 //Clicking on the "LEADERBOARD" will erase all the users scores & and their initials from the leaderboard
+
+
+//My VARIABLES
+
+
+//Countdown Timer Variable & the function/equation
+var startTime = 1;
+let timer = startTime * 60;
