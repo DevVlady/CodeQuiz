@@ -23,7 +23,7 @@
 
 //My VARIABLES
 var seconds = 60;
-var countEl = document.getElementById("cdown");
+var countEl = document.querySelector(".cdown");
 
 
 //Countdown Timer Variable & the function/equation
@@ -34,7 +34,7 @@ function countdown() {
 
         if (seconds === 0) {
             clearInterval(timerInt);
-            alert("Times UP!");
+            // alert("Times UP!");
         }
     }, 1000);
 }
