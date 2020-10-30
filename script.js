@@ -22,8 +22,21 @@
 
 
 //My VARIABLES
+var seconds = 60;
+var countEl = document.getElementById("cdown");
 
 
 //Countdown Timer Variable & the function/equation
-var startTime = 1;
-let timer = startTime * 60;
+function countdown() {
+    var timerInt = setInterval(function() {
+        seconds--;
+        countEl.textContent = seconds + " seconds remaining until times up!";
+
+        if (seconds === 0) {
+            clearInterval(timerInt);
+            alert("Times UP!");
+        }
+    }, 1000);
+}
+
+countdown();
