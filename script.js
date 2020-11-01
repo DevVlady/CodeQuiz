@@ -94,3 +94,21 @@ addScore5.addEventListener("click", function() {
 
     localStorage.setItem("track", track);
 })
+
+
+//Functions & variables to make content appear/disappear upon click
+var startPage = document.getElementById("#startquiz");
+var questOne = document.getElementById("#questionone");
+var questTwo = document.getElementById("#questiontwo");
+var questThree = document.getElementById("#questionthree");
+var questFour = document.getElementById("#questionfour");
+var questFive = document.getElementById("#questionfive");
+
+function showContent() {
+    questOne = document.getElementById("#questionone");
+    if (questOne.style.display === "none") {
+        questOne.style.display = "block";
+    } else {
+        questOne.style.display = "none";
+    }
+}
