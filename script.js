@@ -51,3 +51,46 @@ var addScore3 = document.querySelector("#thousand");
 var addScore4 = document.querySelector("#skyline");
 var addScore5 = document/querySelector("#liter");
 
+var track = localStorage.getItem("track");
+
+tracker.textContent = track;
+
+//Function to add score for the the first question
+addScore.addEventListener("click", function() {
+    track++;
+    tracker.textContent = track;
+
+    localStorage.setItem("track", track);
+})
+
+//Function to add score for the the second question
+addScore2.addEventListener("click", function() {
+    track++;
+    tracker.textContent = track;
+
+    localStorage.setItem("track", track);
+})
+
+//Function to add score for the the third question
+addScore3.addEventListener("click", function() {
+    track++;
+    tracker.textContent = track;
+
+    localStorage.setItem("track", track);
+})
+
+//Function to add score for the the fourth question
+addScore4.addEventListener("click", function() {
+    track++;
+    tracker.textContent = track;
+
+    localStorage.setItem("track", track);
+})
+
+//Function to add score for the the fifth question
+addScore5.addEventListener("click", function() {
+    track++;
+    tracker.textContent = track;
+
+    localStorage.setItem("track", track);
+})
