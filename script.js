@@ -35,9 +35,19 @@ function countdown() {
 
         if (seconds === 0) {
             clearInterval(timerInt);
-            // alert("Times UP!");
+            alert("Times UP!");
         }
     }, 1000);
 }
 
 countdown();
+
+
+//Function that adds socre when the correct answer is selected
+var tracker = document.querySelector("#tracker");
+var addScore = document.querySelector("#aston");
+var addScore2 = document.querySelector("#cobra");
+var addScore3 = document.querySelector("#thousand");
+var addScore4 = document.querySelector("#skyline");
+var addScore5 = document/querySelector("#liter");
+
