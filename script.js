@@ -24,14 +24,14 @@
 
 //My VARIABLES
 var seconds = 60;
-var countEl = document.querySelector("#cdown");
+var countEl = document.querySelector("#time");
 
 
 //Countdown Timer Variable & the function/equation
 function countdown() {
     var timerInt = setInterval(function() {
         seconds--;
-        countEl.textContent = seconds + " seconds remaining until times up!";
+        countEl.textContent = "Timer " + seconds;
 
         if (seconds === 0) {
             clearInterval(timerInt);
