@@ -53,3 +53,24 @@ p {
     margin-left: 215px;
     margin-right: 200px;
 }
+
+h3 {
+    font-size: 40px;
+    text-align: left;
+    margin-left: -65px;
+    overflow-wrap: break-word;
+    margin-right: 285px;
+}
+
+button:active {
+    background-color: red;
+}
+
+#aston:active,
+#cobra:active,
+#thousand:active,
+#skyline:active,
+#liter:active,
+#submit:active {
+    background-color: green;
+}
