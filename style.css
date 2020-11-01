@@ -32,7 +32,7 @@ button {
 }
 
 .container {
-    text-align: center;
+    /* text-align: center; */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -46,21 +46,21 @@ p {
     margin-right: 200px;
 }
 
-h2 {
+/* h2 {
     font-size: 40px;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 400px;
     text-align: center;
-}
+} */
 
-h3 {
+/* h3 {
     font-size: 40px;
     text-align: left;
     margin-left: -65px;
     overflow-wrap: break-word;
     margin-right: 285px;
-}
+} */
 
 button:active {
     background-color: red;
@@ -75,10 +75,10 @@ button:active {
     background-color: green;
 }
 
-h4 {
+/* h4 {
     text-align: center;
     font-size: x-large;
-}
+} */
 
 #start {
     position: fixed;
@@ -88,20 +88,29 @@ h4 {
     padding: 15px;
 }
 
-#submit {
+/* #submit {
     margin-top: 30px;
     margin-left: 240px;
-}
+} */
 
-input {
+/* input {
     padding: 10px;
     text-align: left;;
     margin-left: -65px;
     overflow-wrap: break-word;
     margin-right: 225px;
-}
+} */
 
 
-#initials {
+/* #initials {
     margin-left: -85px;
+} */
+
+#leaderpage,
+#questionone,
+#questiontwo,
+#questionthree,
+#questionfour,
+#questionfive {
+    display: none;
 }
