@@ -103,12 +103,23 @@ var questTwo = document.getElementById("#questiontwo");
 var questThree = document.getElementById("#questionthree");
 var questFour = document.getElementById("#questionfour");
 var questFive = document.getElementById("#questionfive");
+var startBtn = document.getElementById("#start");
 
-function showContent() {
-    var questOne = document.getElementById("#questionone");
-    if (questOne.style.display === "none") {
-        questOne.style.display = "block";
-    } else {
-        questOne.style.display = "none";
-    }
+startBtn.addEventListener("click", start);
+
+function start() {
+    startPage.style.display = "none";
+    questOne.style.display = "block";
+
+    countdown();
 }
+
+
+// function showContent() {
+//     var questOne = document.getElementById("#questionone");
+//     if (questOne.style.display === "none") {
+//         questOne.style.display = "block";
+//     } else {
+//         questOne.style.display = "none";
+//     }
+// }
