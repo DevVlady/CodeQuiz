@@ -83,5 +83,13 @@ h4 {
 #start {
     position: fixed;
     top: 55%;
-    left: 50%
+    left: 50%;
+    display: inline;
+    padding: 15px;
 }
+
+#submit {
+    margin-top: 30px;
+    margin-left: 240px;
+}
+
