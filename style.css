@@ -29,10 +29,10 @@ button {
     border-radius: 10px;
     display: list-item;
     margin-left: -65px;
+    margin-bottom: 5px;
 }
 
 .container {
-    /* text-align: center; */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -51,17 +51,14 @@ h2 {
     font-size: 40px;
     margin-left: -250px;
     margin-right: 100px;
-    /* margin-top: 400px; */
     text-align: center;
 }
 
-/* h3 {
+h3 {
     font-size: 40px;
-    text-align: left;
-    margin-left: -65px;
-    overflow-wrap: break-word;
-    margin-right: 285px;
-} */
+    margin-right: 100px;
+    margin-left: -40px;
+}
 
 button:active {
     background-color: red;
@@ -89,25 +86,23 @@ button:active {
     padding: 15px;
 }
 
-/* #submit {
+#submit {
     margin-top: 30px;
-    margin-left: 240px;
-} */
+    margin-left: 255px;
+}
 
-/* input {
+input {
     padding: 10px;
-    text-align: left;;
-    margin-left: -65px;
+    margin-left: 210px;
     overflow-wrap: break-word;
-    margin-right: 225px;
-} */
+}
 
 
-/* #initials {
-    margin-left: -85px;
-} */
+#initials {
+    margin-left: 0px;
+}
 
-#leaderpage,
+#startquiz,
 #questionone,
 #questiontwo,
 #questionthree,
