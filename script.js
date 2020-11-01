@@ -105,7 +105,7 @@ var questFour = document.getElementById("#questionfour");
 var questFive = document.getElementById("#questionfive");
 
 function showContent() {
-    questOne = document.getElementById("#questionone");
+    var questOne = document.getElementById("#questionone");
     if (questOne.style.display === "none") {
         questOne.style.display = "block";
     } else {
