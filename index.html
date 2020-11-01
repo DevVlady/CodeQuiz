@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<h3><a id="leaderboard" href="./leaderboard.html"></a></h3>
-<h1 id="time">Timer</h1>
-<h4 style="display: none;"><span id="tracker"></span>Score</h4>
-<div class="container">
+    <h3><a id="leaderboard" href="./leaderboard.html"></a></h3>
+    <h1 id="time">Timer</h1>
+    <h4 style="display: none;"><span id="tracker"></span>Score</h4>
+    <div class="container">
+        <div id="startquiz">
+            <h2 id="quiz">Car Quiz: How well do you know your cars?</h2>
+            <p>Instructions: You have 1 minute to answer 5 questions. Please select your best from the multiple choices
+                provided. For each correct answer you will earn 1 point. For every incorrect answer, 10 seconds will be
+                deducted from your time. GOOD LUCK and may the odds be in your favor.</p>
+            <button id="start">Start Quiz</button>
+        </div>
+        <div id="questionone">
+            <h3>DB9 is a model of what car make?</h3>
+            <div>
+                <button>1. Ferrari</button>
+                <button>2. Bentley</button>
+                <button id="aston">3. Aston Martin</button>
+                <button>4. Rolls Royce</button>
+            </div>
+        </div>
+        <div id="questiontwo">
+            <h3>What is the most expensive American car ever sold?</h3>
+            <div>
+                <button>1. Shelby GT 500</button>
+                <button id="cobra">2. Shelby Cobra</button>
+                <button>3. Shelby Mustang</button>
+                <button>4. Crown Victoria</button>
+            </div>
+        </div>
+        <div id="questionthree">
+            <h3>How much horsepower is in a Bugatti Veyron?</h3>
+            <div>
+                <button>1. 800</button>
+                <button>2. 400</button>
+                <button id="thousand">3. 1000</button>
+                <button>4. 750</button>
+            </div>
+        </div>
+        <div id="questionfour">
+            <h3>Which of the following cars are illegal in the USA?</h3>
+            <div>
+                <button>1. Nissan GTR</button>
+                <button>2. Alfa Romeo</button>
+                <button>3. McLaren Senna</button>
+                <button id="skyline">4. Nissan Skyline</button>
+            </div>
+        </div>
+        <div id="questionfive">
+            <h3>What size engine is in a Bugatti Veyron?</h3>
+            <div>
+                <button>1. 8.0L V12</button>
+                <button>2. 8.0L V14</button>
+                <button>3. 10.0L V16</button>
+                <button id="liter">4. 8.0L V16</button>
+            </div>
+        </div>
+        <div id="leaderpage">
+            <h3>You have reached the FINISH LINE!</h3>
+            <div>
+                <p>Enter your initials.</p>
+                <input type="text" id="list">
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
 
-
-</div>
-<script src="./script.js">
-
+    <script src="./script.js"></script>
 
 </body>
+
 </html>

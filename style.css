@@ -1,0 +1,55 @@
+#leaderboard {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: x-large;
+    color: black;
+    margin-top: 25px;
+}
+
+#time {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: x-large;
+}
+
+body {
+    background-color: burlywood;
+    /* background-image: url("https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80");
+    background-size: cover; */
+}
+
+button {
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: list-item;
+    margin-left: -65px;
+}
+
+.container {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -300px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 400px;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    margin-left: 215px;
+    margin-right: 200px;
+}
