@@ -23,6 +23,8 @@
 
 
 //My VARIABLES
+var score = 0;
+var index = 0;
 var seconds = 60;
 var countEl = document.querySelector("#time");
 
