@@ -40,18 +40,18 @@ button {
     margin-left: -300px;
 }
 
+p {
+    font-size: 25px;
+    margin-left: 215px;
+    margin-right: 200px;
+}
+
 h2 {
     font-size: 40px;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 400px;
     text-align: center;
-}
-
-p {
-    font-size: 25px;
-    margin-left: 215px;
-    margin-right: 200px;
 }
 
 h3 {
@@ -93,3 +93,15 @@ h4 {
     margin-left: 240px;
 }
 
+input {
+    padding: 10px;
+    text-align: left;;
+    margin-left: -65px;
+    overflow-wrap: break-word;
+    margin-right: 225px;
+}
+
+
+#initials {
+    margin-left: -85px;
+}
