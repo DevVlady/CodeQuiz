@@ -1,3 +1,4 @@
+//TODO:
 //Create a variable for countdown timer
 //Create a variable to keep track of the leaderboard
 //Click START to begin quiz
@@ -23,7 +24,7 @@
 
 //My VARIABLES
 var seconds = 60;
-var countEl = document.querySelector(".cdown");
+var countEl = document.querySelector("#cdown");
 
 
 //Countdown Timer Variable & the function/equation
