@@ -74,3 +74,14 @@ button:active {
 #submit:active {
     background-color: green;
 }
+
+h4 {
+    text-align: center;
+    font-size: x-large;
+}
+
+#start {
+    position: fixed;
+    top: 55%;
+    left: 50%
+}
