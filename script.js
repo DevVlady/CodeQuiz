@@ -116,38 +116,32 @@ function wrongAnswer() {
 }
 
 
-
-
-
-
-
-
-
-
 //My VARIABLES
 var score = 0;
-var index = 0;
+var count = 0;
 var seconds = 60;
 var countEl = document.querySelector("#time");
 
+//
+
 
 //Countdown Timer Variable & the function/equation
-function countdown() {
-    var timerInt = setInterval(function() {
-        seconds--;
-        countEl.textContent = "Timer " + seconds;
+// function countdown() {
+//     var timerInt = setInterval(function() {
+//         seconds--;
+//         countEl.textContent = "Timer " + seconds;
 
-        if (seconds === 0) {
-            clearInterval(timerInt);
-            alert("Times UP!");
-        }
-    }, 1000);
-}
+//         if (seconds === 0) {
+//             clearInterval(timerInt);
+//             alert("Times UP!");
+//         }
+//     }, 1000);
+// }
 
-countdown();
+// countdown();
 
 
-//Function that adds socre when the correct answer is selected
+//Function that adds score when the correct answer is selected
 var tracker = document.querySelector("#tracker");
 var addScore = document.querySelector("#aston");
 var addScore2 = document.querySelector("#cobra");
