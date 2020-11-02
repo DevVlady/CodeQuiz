@@ -90,7 +90,7 @@ let questions = [
 
 //Indexes
 questions[0].question
-answer[0].correct
+// answer[0].correct
 questions[0].choiceA
 questions[0].choiceB
 questions[0].choiceC
@@ -103,12 +103,14 @@ let currentQuestion = 0;
 
 function renderQuestion() {
     var quest = questions[currentQuestion];
-    question.innerHTML = "<p>" + quest.question + "</p>";
+    // question.innerHTML = "<p>" + quest.question + "</p>";
     choiceA.innerHTML = quest.choiceA;
     choiceB.innerHTML = quest.choiceB;
     choiceC.innerHTML = quest.choiceC;
     choiceD.innerHTML = quest.choiceD;
 }
+
+console.log(renderQuestion);
 
 currentQuestion = 0;
 renderQuestion();
@@ -131,34 +133,37 @@ function wrongAnswer() {
 var score = 0;
 var count = 0;
 var seconds = 60;
-var countEl = document.querySelector("#time");
+var timeEl = document.querySelector("#time");
 
 //Time render function
 function timeRender() {
     if (count <= seconds) {
-        counter.innerHTML = count;
+        timeEl.innerHTML = count;
         count++;
-    } else {
+    }
+    else {
         count=0;
         wrongAnswer();
         if (currentQuestion < questionFive) {
             currentQuestion++;
             renderQuestion();
-        } else {
-            clearInterval(Timer);
+        }
+        else {
+            clearInterval(timeEl);
             scoreRender();
         }
     }
 }
 
-var Timer = setInterval(timeRender, 1000);
-clearInterval(Timer);
+var timerCt = setInterval(timeRender, 1000);
+clearInterval(timeEl);
 
 
 //Function to check answer & add to score
 function checkAnswer(answer) {
     if (answer[currentQuestion].correct == answer) {
         score++;
+        timeEl.textContent = "Timer" + seconds;
         correctAnswer();
     } else {
         wrongAnswer();
@@ -168,22 +173,24 @@ function checkAnswer(answer) {
         currentQuestion++;
         renderQuestion();
     } else {
-        clearInterval(Timer);
+        clearInterval(timeEl);
         scoreRender();
     }
 }
 
 //Function to start the quiz
-start.addEventListener("click", startQuiz);
-var Timer;
+// start.addEventListener("click", startQuiz);
+
 
 function startQuiz() {
     start.style.display = "none";
     timeRender();
-    Timer = setInterval(timeRender, 1000);
+    timeEl = setInterval(timeRender, 1000);
     renderQuestion();
     quiz.style.display = "block";
 }
+
+console.log(startQuiz);
 
 //TODO:First Code ---------------------------------------------------------------------------
 
