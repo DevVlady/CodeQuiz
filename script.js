@@ -77,6 +77,14 @@ var questions = [
     }
 ];
 
+//Indexes
+index[0].question
+answers[0].correct
+questions[0].choiceA
+questions[0].choiceB
+questions[0].choiceC
+questions[0].choiceD
+
 
 //My VARIABLES
 var score = 0;
