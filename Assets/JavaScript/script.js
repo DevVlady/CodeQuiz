@@ -29,16 +29,20 @@
 var seconds = 60;
 var score = 0;
 var mainIndex =0;
-var leaderBoard;
-var questionAmount = 5;
+var numQuestions = 5;
 var countdown;
 var question = 0;
 
 //Variables obtained from html file
 var mainpageEl = document.getElementById("#mainpage");
-var startBtn = document.getElementById("#go");
+var goBtn = document.getElementById("#go");
 var timeEl = document.getElementById("#timer");
 var questionsEl = document.getElementById("#questions");
+var leaderboardEl = document.getElementById("#leaderboard");
+var finishEl = document.getElementById("#finish");
+var finalscoreEl = document.getElementById("#finalscore");
+var submitBtn = document.getElementById("#submit");
+var initialsEl = document.getElementById("#initials");
 
 
 //Function that lists all my questions and answers
@@ -70,6 +74,24 @@ let questions = [
     }
 ];
 
+//Event listener for the button/s
+goBtn.addEventListener("click", quizStarted);
+
+//Function to begin the quiz upon clicking start
+function quizStarted () {
+    mainpageEl.style.display = "none";
+    questionsEl.style.display = "block";
+
+    //Adding the countdown upon clicking start
+    countdown();
+    renderQuestions();
+}
+
+
+
+
+
+
 
 //Timer function
 function countdown() {
@@ -85,20 +107,6 @@ function countdown() {
 }
 
 countdown();
-
-//Event listener for the button/s
-startBtn.addEventListener("click", quizStarted);
-
-//Function to begin the quiz upon clicking start
-function quizStarted () {
-    mainpageEl.style.display = "none";
-    questionsEl.style.display = "block";
-
-    //Adding the countdown upon clicking start
-    countdown();
-    renderQuestions();
-}
-
 
 //Function to render the questions upon clicking the start button
 function renderQuestions () {
