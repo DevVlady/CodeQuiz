@@ -10,10 +10,9 @@
 
 <body>
 
-    <h3><a id="leaderboard" href="./leaderboard.html">Leaderboard</a></h3>
-    <h1 id="time">Timer</h1>
-
-    <!-- <div class="container"> -->
+    <div id="allcontent">
+        <h1 id="time">Timer</h1>
+        <h3><a id="leaderboard" href="./leaderboard.html">Leaderboard</a></h3>
         <div id="mainpage">
             <h2 id="quiz">Car Quiz: How well do you know your cars?</h2>
             <p>Instructions: You have 1 minute to answer 5 questions. Please select your best from the multiple choices
@@ -21,15 +20,15 @@
                 deducted from your time. GOOD LUCK and may the odds be in your favor.</p>
             <button id="start">Start Quiz</button>
         </div>
-        <div id="questcontainer" style="display: none;">
-            <div id="question">
-                <p>Question</p>
-            </div>
-            <div id="multiplechoice">
-                <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
-                <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
-                <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
-                <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
+        <div id="quizsection" style="display: none;">
+            <div id="questions">
+                <h2>Question</h2>
+                <ol id="multiplechoice">
+                    <li class="choice" id="A" onclick="checkAnswer('A')">A</li>
+                    <li class="choice" id="B" onclick="checkAnswer('B')">B</li>
+                    <li class="choice" id="C" onclick="checkAnswer('C')">C</li>
+                    <li class="choice" id="D" onclick="checkAnswer('D')">D</li>
+                </ol>
             </div>
             <div id="completed" style="display: none;">
                 <h3>You have reached the FINISH LINE!</h3>
@@ -44,7 +43,7 @@
                 <button id="clearscores">Clear Highscores</button>
             </div>
         </div>
-    <!-- </div> -->
+    </div>
 
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
