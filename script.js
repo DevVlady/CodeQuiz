@@ -117,11 +117,11 @@ function start() {
 }
 
 
-// function showContent() {
-//     var questOne = document.getElementById("#questionone");
-//     if (questOne.style.display === "none") {
-//         questOne.style.display = "block";
-//     } else {
-//         questOne.style.display = "none";
-//     }
-// }
+function showContent() {
+    var questOne = document.getElementById("#questionone");
+    if (questOne.style.display === "none") {
+        questOne.style.display = "block";
+    } else {
+        questOne.style.display = "none";
+    }
+}
