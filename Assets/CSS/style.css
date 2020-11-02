@@ -7,7 +7,7 @@
     margin-top: 25px;
 }
 
-#time {
+#timer {
     position: absolute;
     top: 0;
     right: 20px;
@@ -42,16 +42,15 @@ button {
 
 p {
     font-size: 25px;
-    margin-left: -250px;
+    margin-left: 80px;
     margin-right: 100px;
     text-align: center;
 }
 
 h2 {
     font-size: 40px;
-    margin-left: -250px;
-    margin-right: 100px;
     text-align: center;
+    margin-top: 400px;
 }
 
 h3 {
@@ -78,7 +77,7 @@ button:active {
     font-size: x-large;
 } */
 
-#start {
+#go {
     position: fixed;
     top: 50%;
     left: 50%;

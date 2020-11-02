@@ -113,6 +113,8 @@ function renderOptionChoices () {
 
 
 
+
+
 //TODO: Second Code-------------------------------------------------------------------------------------
 
 //Variables from the new divs created in html
