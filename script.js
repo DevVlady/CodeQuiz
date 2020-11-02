@@ -34,7 +34,48 @@ var choiceD = document.getElementById("D")
 
 
 //Function that lists all my questions and answers
-
+var questions = [
+    {
+        question: "DB9 is a model of what car make?",
+        choiceA: "Ferrari",
+        choiceB: "Bentley",
+        choiceC: "Aston Martin",
+        choiceD: "Rolls Royce",
+        correct: "C"
+    },
+    {
+        question: "What is the most expensive American car ever sold?",
+        choiceA: "Shelby GT 500",
+        choiceB: "Shelby Cobra",
+        choiceC: "Shelby Mustang",
+        choiceD: "Crown Victoria",
+        correct: "B"
+    },
+    {
+        question: "How much horsepower is in a Bugatti Veyron?",
+        choiceA: "800",
+        choiceB: "400",
+        choiceC: "1000",
+        choiceD: "700",
+        correct: "C"
+    },
+    {
+        question: "Which of the following cars are illegal in the USA?",
+        choiceA: "Nissan GTR",
+        choiceB: "Alfa Romeo",
+        choiceC: "McLaren Senna",
+        choiceD: "Nissan Skyline",
+        correct: "D"
+    },
+    {
+        question: "What size engine is in a Bugatti Veyron?",
+        choiceA: "8.0L V12",
+        choiceB: "8.0L V14",
+        choiceC: "10.0L V16",
+        choiceD: "8.0L V16",
+        correct: "D"
+    }
+];
 
 
 //My VARIABLES
