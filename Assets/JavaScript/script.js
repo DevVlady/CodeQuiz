@@ -70,6 +70,18 @@ function renderQuestions () {
 console.log(renderQuestions);
 
 
+//Function to begin the quiz upon clicking start
+function quizStarted () {
+    mainpageEl.style.display = "none";
+    questionsEl.style.display = "block";
+
+    //Adding the countdown upon clicking start
+    countdown();
+    renderQuestions();
+}
+
+console.log(quizStarted);
+
 
 
 
