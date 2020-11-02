@@ -31,6 +31,51 @@ var score = 0;
 var mainIndex =0;
 var leaderBoard;
 
+//Function that lists all my questions and answers
+let questions = [
+    {
+        question: "DB9 is a model of what car make?",
+        choiceA: "Ferrari",
+        choiceB: "Bentley",
+        choiceC: "Aston Martin",
+        choiceD: "Rolls Royce",
+        correct: "C"
+    },
+    {
+        question: "What is the most expensive American car ever sold?",
+        choiceA: "Shelby GT 500",
+        choiceB: "Shelby Cobra",
+        choiceC: "Shelby Mustang",
+        choiceD: "Crown Victoria",
+        correct: "B"
+    },
+    {
+        question: "How much horsepower is in a Bugatti Veyron?",
+        choiceA: "800",
+        choiceB: "400",
+        choiceC: "1000",
+        choiceD: "700",
+        correct: "C"
+    },
+    {
+        question: "Which of the following cars are illegal in the USA?",
+        choiceA: "Nissan GTR",
+        choiceB: "Alfa Romeo",
+        choiceC: "McLaren Senna",
+        choiceD: "Nissan Skyline",
+        correct: "D"
+    },
+    {
+        question: "What size engine is in a Bugatti Veyron?",
+        choiceA: "8.0L V12",
+        choiceB: "8.0L V14",
+        choiceC: "10.0L V16",
+        choiceD: "8.0L V16",
+        correct: "D"
+    }
+];
+
+
 //Variables obtained from html file
 var mainpageEl = document.getElementById("mainpage");
 var startBtn = document.getElementById("go");
@@ -101,6 +146,7 @@ function renderOptionChoices () {
     finishLine();
 }
 
+//Function to check the answer right from wrong
 
 
 
@@ -128,49 +174,6 @@ function renderOptionChoices () {
 // var choices = document.getElementById("#choices");
 
 
-//Function that lists all my questions and answers
-let questions = [
-    {
-        question: "DB9 is a model of what car make?",
-        choiceA: "Ferrari",
-        choiceB: "Bentley",
-        choiceC: "Aston Martin",
-        choiceD: "Rolls Royce",
-        correct: "C"
-    },
-    {
-        question: "What is the most expensive American car ever sold?",
-        choiceA: "Shelby GT 500",
-        choiceB: "Shelby Cobra",
-        choiceC: "Shelby Mustang",
-        choiceD: "Crown Victoria",
-        correct: "B"
-    },
-    {
-        question: "How much horsepower is in a Bugatti Veyron?",
-        choiceA: "800",
-        choiceB: "400",
-        choiceC: "1000",
-        choiceD: "700",
-        correct: "C"
-    },
-    {
-        question: "Which of the following cars are illegal in the USA?",
-        choiceA: "Nissan GTR",
-        choiceB: "Alfa Romeo",
-        choiceC: "McLaren Senna",
-        choiceD: "Nissan Skyline",
-        correct: "D"
-    },
-    {
-        question: "What size engine is in a Bugatti Veyron?",
-        choiceA: "8.0L V12",
-        choiceB: "8.0L V14",
-        choiceC: "10.0L V16",
-        choiceD: "8.0L V16",
-        correct: "D"
-    }
-];
 
 //Indexes
 questions[0].question
@@ -213,34 +216,6 @@ questions[0].choiceD
 // }
 
 
-//My VARIABLES
-// var score = 0;
-// var count = 0;
-// var seconds = 60;
-// var timeEl = document.querySelector("#time");
-
-//Time render function
-// function timeRender() {
-//     if (count <= seconds) {
-//         timeEl.innerHTML = "Timer " + seconds;
-//         seconds--;
-//     }
-//     else {
-//         count=0;
-//         wrongAnswer();
-//         if (currentQuestion < questionFive) {
-//             currentQuestion++;
-//             renderQuestion();
-//         }
-//         else {
-//             clearInterval(timeEl);
-//             scoreRender();
-//         }
-//     }
-// }
-
-// var timerCt = setInterval(timeRender, 1000);
-// clearInterval(timeEl);
 
 
 //Function to check answer & add to score
@@ -271,104 +246,4 @@ questions[0].choiceD
 //     timeEl = setInterval(timeRender, 1000);
 //     renderQuestion();
 //     quiz.style.display = "block";
-// }
-
-// console.log(startQuiz);
-
-//TODO:First Code ---------------------------------------------------------------------------
-
-//Countdown Timer Variable & the function/equation
-// function countdown() {
-//     var timerInt = setInterval(function() {
-//         seconds--;
-//         countEl.textContent = "Timer " + seconds;
-
-//         if (seconds === 0) {
-//             clearInterval(timerInt);
-//             alert("Times UP!");
-//         }
-//     }, 1000);
-// }
-
-// countdown();
-
-
-//Function that adds score when the correct answer is selected
-// var tracker = document.querySelector("#tracker");
-// var addScore = document.querySelector("#aston");
-// var addScore2 = document.querySelector("#cobra");
-// var addScore3 = document.querySelector("#thousand");
-// var addScore4 = document.querySelector("#skyline");
-// var addScore5 = document/querySelector("#liter");
-
-// var track = localStorage.getItem("track");
-
-// tracker.textContent = track;
-
-//Function to add score for the the first question
-// addScore.addEventListener("click", function() {
-//     track++;
-//     tracker.textContent = track;
-
-//     localStorage.setItem("track", track);
-// })
-
-//Function to add score for the the second question
-// addScore2.addEventListener("click", function() {
-//     track++;
-//     tracker.textContent = track;
-
-//     localStorage.setItem("track", track);
-// })
-
-//Function to add score for the the third question
-// addScore3.addEventListener("click", function() {
-//     track++;
-//     tracker.textContent = track;
-
-//     localStorage.setItem("track", track);
-// })
-
-//Function to add score for the the fourth question
-// addScore4.addEventListener("click", function() {
-//     track++;
-//     tracker.textContent = track;
-
-//     localStorage.setItem("track", track);
-// })
-
-//Function to add score for the the fifth question
-// addScore5.addEventListener("click", function() {
-//     track++;
-//     tracker.textContent = track;
-
-//     localStorage.setItem("track", track);
-// })
-
-
-//Functions & variables to make content appear/disappear upon click
-// var startPage = document.getElementById("#startquiz");
-// var questOne = document.getElementById("#questionone");
-// var questTwo = document.getElementById("#questiontwo");
-// var questThree = document.getElementById("#questionthree");
-// var questFour = document.getElementById("#questionfour");
-// var questFive = document.getElementById("#questionfive");
-// var startBtn = document.getElementById("#start");
-
-
-// function start() {
-//     startPage.style.display = "none";
-//     questOne.style.display = "block";
-
-//     countdown();
-// }
-
-
-// function showContent() {
-//     var questOne = document.getElementById("#questionone");
-//     if (questOne.style.display === "none") {
-//         questOne.style.display = "block";
-//     } else {
-//         questOne.style.display = "none";
-//     }
 // }
