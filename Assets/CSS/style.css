@@ -1,17 +1,7 @@
-#leaderboard {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    font-size: x-large;
-    color: black;
-    margin-top: 25px;
-}
-
 #timer {
     position: absolute;
     top: 0;
     right: 20px;
-    font-size: x-large;
 }
 
 body {
@@ -32,14 +22,6 @@ button {
     margin-bottom: 5px;
 }
 
-.container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -300px;
-}
-
 p {
     font-size: 25px;
     margin-left: 80px;
@@ -53,30 +35,6 @@ h2 {
     margin-top: 400px;
 }
 
-h3 {
-    font-size: 40px;
-    margin-right: 100px;
-    margin-left: -40px;
-}
-
-button:active {
-    background-color: red;
-}
-
-#aston:active,
-#cobra:active,
-#thousand:active,
-#skyline:active,
-#liter:active,
-#submit:active {
-    background-color: green;
-}
-
-/* h4 {
-    text-align: center;
-    font-size: x-large;
-} */
-
 #go {
     position: fixed;
     top: 50%;
@@ -85,27 +43,8 @@ button:active {
     padding: 15px;
 }
 
-#submit {
-    margin-top: 30px;
-    margin-left: 255px;
-}
-
 input {
     padding: 10px;
     margin-left: 210px;
     overflow-wrap: break-word;
 }
-
-
-#initials {
-    margin-left: 0px;
-}
-
-/* #leaderpage,
-#questionone,
-#questiontwo,
-#questionthree,
-#questionfour,
-#questionfive {
-    display: none;
-} */
