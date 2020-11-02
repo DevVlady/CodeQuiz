@@ -86,6 +86,22 @@ questions[0].choiceC
 questions[0].choiceD
 
 
+//Question Render & Function
+var questionfive = questions.length - 1;
+var currentQuestion = 0;
+
+function renderQuestion() {
+    var quest = questions[currentQuestion];
+    question.innerHTML = "<p>" + quest.question + "</p>";
+    choiceA.innerHTML = quest.choiceA;
+    choiceB.innerHTML = quest.choiceB;
+    choiceC.innerHTML = quest.choiceC;
+    choiceD.innerHTML = quest.choiceD;
+}
+
+
+
+
 //My VARIABLES
 var score = 0;
 var index = 0;
