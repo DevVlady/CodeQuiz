@@ -88,7 +88,7 @@ questions[0].choiceD
 
 //Question Render & Function
 var questionfive = questions.length - 1;
-var currentQuestion = 0;
+let currentQuestion = 0;
 
 function renderQuestion() {
     var quest = questions[currentQuestion];
@@ -98,6 +98,28 @@ function renderQuestion() {
     choiceC.innerHTML = quest.choiceC;
     choiceD.innerHTML = quest.choiceD;
 }
+
+currentQuestion = 0;
+renderQuestion();
+//This will help return the next question once the user selects an answer
+currentQuestion++
+renderQuestion();
+
+
+//Functions that will allow the buttons to turn green or red depending on the answer. Green for correct and red for incorrect
+function correctAnswer() {
+    document.getElementById(currentQuestion).style.backgroundColor = "green";
+}
+
+function wrongAnswer() {
+    document.getElementById(currentQuestion).style.backgroundColor = "red";
+}
+
+
+
+
+
+
 
 
 
