@@ -32,7 +32,13 @@ var mainIndex =0;
 var leaderBoard;
 
 //Variables obtained from html file
-var startEl = document.getElementById("mainpage");
+var mainpageEl = document.getElementById("mainpage");
+var startBtn = document.getElementById("go");
+var timeEl = document.getElementById("timer");
+var questionsEl = document.getElementById("questions");
+
+
+
 
 
 
