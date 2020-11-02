@@ -21,8 +21,29 @@
                 deducted from your time. GOOD LUCK and may the odds be in your favor.</p>
             <button id="start" onclick="showContent()">Start Quiz</button>
         </div>
-        <div id="questcontainer">
-            <div id="questionone">
+        <div id="questcontainer" style="display: none;">
+            <div id="question" style="display: none;">
+                <p>Question</p>
+            </div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+                <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
+                <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+                <div class="choice" id="D" onclick="checkAnswer('D')">D</div>
+            </div>
+            <div id="completed" style="display: none;">
+                <h3>All Done!</h3>
+                <p id="finalscore"></p>
+                <p>Enter your initials:</p>
+                <input type="text">
+                <button id="submit">Submit</button>
+            </div>
+            <div id="scorebox" style="display: none;">
+                <h3>Highscores</h3>
+                <button id="goback">Go Back</button>
+                <button id="clearscores">Clear Highscores</button>
+            </div>
+            <!-- <div id="questionone">
                 <h3>DB9 is a model of what car make?</h3>
                 <div>
                     <button>1. Ferrari</button>
@@ -66,15 +87,15 @@
                     <button>3. 10.0L V16</button>
                     <button id="liter">4. 8.0L V16</button>
                 </div>
-            </div>
-            <div id="leaderpage">
+            </div> -->
+            <!-- <div id="leaderpage">
                 <h3>You have reached the FINISH LINE!</h3>
                 <div>
                     <p id="initials">Enter your initials.</p>
                     <input type="text" id="list">
                     <button id="submit">Submit</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
