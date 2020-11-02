@@ -44,7 +44,7 @@ function countdown() {
         timeEl.textContent = "Timer " + seconds;
 
         if (seconds === 0) {
-            clearInterval(timeEl);
+            clearInterval(timerInt);
             // alert("Times UP!");
         }
     }, 1000);
