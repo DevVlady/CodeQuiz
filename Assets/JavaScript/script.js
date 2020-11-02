@@ -37,6 +37,28 @@ var startBtn = document.getElementById("go");
 var timeEl = document.getElementById("timer");
 var questionsEl = document.getElementById("questions");
 
+//Timer function
+function countdown() {
+    var timerInt = setInterval(function() {
+        seconds--;
+        timeEl.textContent = "Timer " + seconds;
+
+        if (seconds === 0) {
+            clearInterval(timeEl);
+            alert("Times UP!");
+        }
+    }, 1000);
+}
+
+countdown();
+
+
+
+//Event listener for the button/s
+startBtn.addEventListener("click", quizStarted);
+
+
+
 
 
 
