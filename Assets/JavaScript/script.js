@@ -6,7 +6,7 @@
 //Each page will have a heading which contains a the question
 //Each page will have 4 buttons which will contain answers to the question asked
 //If the wrong answer is selected then 10 seconds will be deducted from the countdown timer
-//Each correct answer will add 10 points to the users scoresheet
+//Each correct answer will add 1 point to the users scoresheet
 //Right or wrong alert will be displayed when the user selects an answer
 //A loop will be created where this will happen 5 times
 //On the final page text will be desplayed letting the user know the quiz is complete
@@ -25,6 +25,16 @@
 
 //TODO:Third Code
 
+//Variables & indexes
+var seconds = 60;
+var score = 0;
+var mainIndex =0;
+var leaderBoard;
+
+//Variables obtained from html file
+
+
+
 
 
 
@@ -34,14 +44,14 @@
 //TODO: Second Code-------------------------------------------------------------------------------------
 
 //Variables from the new divs created in html
-var start = document.getElementById("#start");
-var quiz = document.getElementById("#questcontainer");
-var question = document.getElementById("#question");
-var choiceA = document.getElementById("A")
-var choiceB = document.getElementById("B")
-var choiceC = document.getElementById("C")
-var choiceD = document.getElementById("D")
-var choices = document.getElementById("#choices");
+// var start = document.getElementById("#start");
+// var quiz = document.getElementById("#questcontainer");
+// var question = document.getElementById("#question");
+// var choiceA = document.getElementById("A")
+// var choiceB = document.getElementById("B")
+// var choiceC = document.getElementById("C")
+// var choiceD = document.getElementById("D")
+// var choices = document.getElementById("#choices");
 
 
 //Function that lists all my questions and answers
@@ -89,107 +99,107 @@ let questions = [
 ];
 
 //Indexes
-questions[0].question
+// questions[0].question
 // answer[0].correct
-questions[0].choiceA
-questions[0].choiceB
-questions[0].choiceC
-questions[0].choiceD
+// questions[0].choiceA
+// questions[0].choiceB
+// questions[0].choiceC
+// questions[0].choiceD
 
 
 //Question Render & Function
-var questionFive = questions.length - 1;
-let currentQuestion = 0;
+// var questionFive = questions.length - 1;
+// let currentQuestion = 0;
 
-function renderQuestion() {
-    var quest = questions[currentQuestion];
-    // question.innerHTML = "<p>" + quest.question + "</p>";
-    choiceA.innerHTML = quest.choiceA;
-    choiceB.innerHTML = quest.choiceB;
-    choiceC.innerHTML = quest.choiceC;
-    choiceD.innerHTML = quest.choiceD;
-}
+// function renderQuestion() {
+//     var quest = questions[currentQuestion];
+//     // question.innerHTML = "<p>" + quest.question + "</p>";
+//     choiceA.innerHTML = quest.choiceA;
+//     choiceB.innerHTML = quest.choiceB;
+//     choiceC.innerHTML = quest.choiceC;
+//     choiceD.innerHTML = quest.choiceD;
+// }
 
-console.log(renderQuestion);
+// console.log(renderQuestion);
 
-currentQuestion = 0;
-renderQuestion();
+// currentQuestion = 0;
+// renderQuestion();
 //This will help return the next question once the user selects an answer
-currentQuestion++
-renderQuestion();
+// currentQuestion++
+// renderQuestion();
 
 
 //Functions that will allow the buttons to turn green or red depending on the answer. Green for correct and red for incorrect
-function correctAnswer() {
-    document.getElementById(currentQuestion).style.backgroundColor = "green";
-}
+// function correctAnswer() {
+//     document.getElementById(currentQuestion).style.backgroundColor = "green";
+// }
 
-function wrongAnswer() {
-    document.getElementById(currentQuestion).style.backgroundColor = "red";
-}
+// function wrongAnswer() {
+//     document.getElementById(currentQuestion).style.backgroundColor = "red";
+// }
 
 
 //My VARIABLES
-var score = 0;
-var count = 0;
-var seconds = 60;
-var timeEl = document.querySelector("#time");
+// var score = 0;
+// var count = 0;
+// var seconds = 60;
+// var timeEl = document.querySelector("#time");
 
 //Time render function
-function timeRender() {
-    if (count <= seconds) {
-        timeEl.innerHTML = "Timer " + seconds;
-        seconds--;
-    }
-    else {
-        count=0;
-        wrongAnswer();
-        if (currentQuestion < questionFive) {
-            currentQuestion++;
-            renderQuestion();
-        }
-        else {
-            clearInterval(timeEl);
-            scoreRender();
-        }
-    }
-}
+// function timeRender() {
+//     if (count <= seconds) {
+//         timeEl.innerHTML = "Timer " + seconds;
+//         seconds--;
+//     }
+//     else {
+//         count=0;
+//         wrongAnswer();
+//         if (currentQuestion < questionFive) {
+//             currentQuestion++;
+//             renderQuestion();
+//         }
+//         else {
+//             clearInterval(timeEl);
+//             scoreRender();
+//         }
+//     }
+// }
 
-var timerCt = setInterval(timeRender, 1000);
-clearInterval(timeEl);
+// var timerCt = setInterval(timeRender, 1000);
+// clearInterval(timeEl);
 
 
 //Function to check answer & add to score
-function checkAnswer(answer) {
-    if (answer[currentQuestion].correct == answer) {
-        score++;
-        correctAnswer();
-    } else {
-        wrongAnswer();
-    }
-    if (currentQuestion < questionFive) {
-        count = 0;
-        currentQuestion++;
-        renderQuestion();
-    } else {
-        clearInterval(timeEl);
-        scoreRender();
-    }
-}
+// function checkAnswer(answer) {
+//     if (answer[currentQuestion].correct == answer) {
+//         score++;
+//         correctAnswer();
+//     } else {
+//         wrongAnswer();
+//     }
+//     if (currentQuestion < questionFive) {
+//         count = 0;
+//         currentQuestion++;
+//         renderQuestion();
+//     } else {
+//         clearInterval(timeEl);
+//         scoreRender();
+//     }
+// }
 
 //Function to start the quiz
 // start.addEventListener("click", startQuiz);
 
 
-function startQuiz() {
-    start.style.display = "none";
-    timeRender();
-    timeEl = setInterval(timeRender, 1000);
-    renderQuestion();
-    quiz.style.display = "block";
-}
+// function startQuiz() {
+//     start.style.display = "none";
+//     timeRender();
+//     timeEl = setInterval(timeRender, 1000);
+//     renderQuestion();
+//     quiz.style.display = "block";
+// }
 
-console.log(startQuiz);
+// console.log(startQuiz);
 
 //TODO:First Code ---------------------------------------------------------------------------
 
