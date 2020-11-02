@@ -23,7 +23,6 @@
 
 
 //Variables from the new divs created in html
-startBtn.addEventListener("click", startQuiz);
 var start = document.getElementById("#start");
 var quiz = document.getElementById("#questcontainer");
 var question = document.getElementById("#question");
@@ -78,8 +77,8 @@ var questions = [
 ];
 
 //Indexes
-index[0].question
-answers[0].correct
+questions[0].question
+questions[0].correct
 questions[0].choiceA
 questions[0].choiceB
 questions[0].choiceC
@@ -140,6 +139,31 @@ function timeRender() {
     }
 }
 
+let Timer = setInterval(timeRender, 1000);
+clearInterval(Timer);
+
+//Function to check answer & add to score
+function checkAnswer(answer) {
+    if (questions[currentQuestion].correct == answer) {
+        score++;
+        correctAnswer();
+    } else {
+        wrongAnswer();
+    }
+    if (currentQuestion < questionFive) {
+        count = 0;
+        currentQuestion++;
+        renderQuestion();
+    } else {
+        clearInterval(Timer);
+        scoreRender();
+    }
+}
+
+//Function to start the quiz
+start.addEventListener("click", startQuiz);
+
+
 
 //Countdown Timer Variable & the function/equation
 // function countdown() {
@@ -158,81 +182,81 @@ function timeRender() {
 
 
 //Function that adds score when the correct answer is selected
-var tracker = document.querySelector("#tracker");
-var addScore = document.querySelector("#aston");
-var addScore2 = document.querySelector("#cobra");
-var addScore3 = document.querySelector("#thousand");
-var addScore4 = document.querySelector("#skyline");
-var addScore5 = document/querySelector("#liter");
+// var tracker = document.querySelector("#tracker");
+// var addScore = document.querySelector("#aston");
+// var addScore2 = document.querySelector("#cobra");
+// var addScore3 = document.querySelector("#thousand");
+// var addScore4 = document.querySelector("#skyline");
+// var addScore5 = document/querySelector("#liter");
 
-var track = localStorage.getItem("track");
+// var track = localStorage.getItem("track");
 
-tracker.textContent = track;
+// tracker.textContent = track;
 
 //Function to add score for the the first question
-addScore.addEventListener("click", function() {
-    track++;
-    tracker.textContent = track;
+// addScore.addEventListener("click", function() {
+//     track++;
+//     tracker.textContent = track;
 
-    localStorage.setItem("track", track);
-})
+//     localStorage.setItem("track", track);
+// })
 
 //Function to add score for the the second question
-addScore2.addEventListener("click", function() {
-    track++;
-    tracker.textContent = track;
+// addScore2.addEventListener("click", function() {
+//     track++;
+//     tracker.textContent = track;
 
-    localStorage.setItem("track", track);
-})
+//     localStorage.setItem("track", track);
+// })
 
 //Function to add score for the the third question
-addScore3.addEventListener("click", function() {
-    track++;
-    tracker.textContent = track;
+// addScore3.addEventListener("click", function() {
+//     track++;
+//     tracker.textContent = track;
 
-    localStorage.setItem("track", track);
-})
+//     localStorage.setItem("track", track);
+// })
 
 //Function to add score for the the fourth question
-addScore4.addEventListener("click", function() {
-    track++;
-    tracker.textContent = track;
+// addScore4.addEventListener("click", function() {
+//     track++;
+//     tracker.textContent = track;
 
-    localStorage.setItem("track", track);
-})
+//     localStorage.setItem("track", track);
+// })
 
 //Function to add score for the the fifth question
-addScore5.addEventListener("click", function() {
-    track++;
-    tracker.textContent = track;
+// addScore5.addEventListener("click", function() {
+//     track++;
+//     tracker.textContent = track;
 
-    localStorage.setItem("track", track);
-})
+//     localStorage.setItem("track", track);
+// })
 
 
 //Functions & variables to make content appear/disappear upon click
-var startPage = document.getElementById("#startquiz");
-var questOne = document.getElementById("#questionone");
-var questTwo = document.getElementById("#questiontwo");
-var questThree = document.getElementById("#questionthree");
-var questFour = document.getElementById("#questionfour");
-var questFive = document.getElementById("#questionfive");
-var startBtn = document.getElementById("#start");
+// var startPage = document.getElementById("#startquiz");
+// var questOne = document.getElementById("#questionone");
+// var questTwo = document.getElementById("#questiontwo");
+// var questThree = document.getElementById("#questionthree");
+// var questFour = document.getElementById("#questionfour");
+// var questFive = document.getElementById("#questionfive");
+// var startBtn = document.getElementById("#start");
 
 
-function start() {
-    startPage.style.display = "none";
-    questOne.style.display = "block";
+// function start() {
+//     startPage.style.display = "none";
+//     questOne.style.display = "block";
 
-    countdown();
-}
+//     countdown();
+// }
 
 
-function showContent() {
-    var questOne = document.getElementById("#questionone");
-    if (questOne.style.display === "none") {
-        questOne.style.display = "block";
-    } else {
-        questOne.style.display = "none";
-    }
-}
+// function showContent() {
+//     var questOne = document.getElementById("#questionone");
+//     if (questOne.style.display === "none") {
+//         questOne.style.display = "block";
+//     } else {
+//         questOne.style.display = "none";
+//     }
+// }
