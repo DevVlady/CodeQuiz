@@ -87,7 +87,7 @@ questions[0].choiceD
 
 
 //Question Render & Function
-var questionfive = questions.length - 1;
+var questionFive = questions.length - 1;
 let currentQuestion = 0;
 
 function renderQuestion() {
@@ -122,7 +122,23 @@ var count = 0;
 var seconds = 60;
 var countEl = document.querySelector("#time");
 
-//
+//Time render function
+function timeRender() {
+    if (count <= seconds) {
+        counter.innerHTML = count;
+        count++;
+    } else {
+        count=0;
+        wrongAnswer();
+        if (currentQuestion < questionFive) {
+            currentQuestion++;
+            renderQuestion();
+        } else {
+            clearInterval(Timer);
+            scoreRender();
+        }
+    }
+}
 
 
 //Countdown Timer Variable & the function/equation
