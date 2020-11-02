@@ -138,8 +138,8 @@ var timeEl = document.querySelector("#time");
 //Time render function
 function timeRender() {
     if (count <= seconds) {
-        timeEl.innerHTML = count;
-        count++;
+        timeEl.innerHTML = "Timer " + seconds;
+        seconds--;
     }
     else {
         count=0;
@@ -163,7 +163,6 @@ clearInterval(timeEl);
 function checkAnswer(answer) {
     if (answer[currentQuestion].correct == answer) {
         score++;
-        timeEl.textContent = "Timer" + seconds;
         correctAnswer();
     } else {
         wrongAnswer();
