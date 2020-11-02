@@ -22,6 +22,17 @@
 //Clicking on the "LEADERBOARD" will erase all the users scores & and their initials from the leaderboard
 
 
+
+//TODO:Third Code
+
+
+
+
+
+
+
+//TODO: Second Code-------------------------------------------------------------------------------------
+
 //Variables from the new divs created in html
 var start = document.getElementById("#start");
 var quiz = document.getElementById("#questcontainer");
@@ -30,10 +41,11 @@ var choiceA = document.getElementById("A")
 var choiceB = document.getElementById("B")
 var choiceC = document.getElementById("C")
 var choiceD = document.getElementById("D")
+var choices = document.getElementById("#choices");
 
 
 //Function that lists all my questions and answers
-var questions = [
+let questions = [
     {
         question: "DB9 is a model of what car make?",
         choiceA: "Ferrari",
@@ -78,7 +90,7 @@ var questions = [
 
 //Indexes
 questions[0].question
-questions[0].correct
+answer[0].correct
 questions[0].choiceA
 questions[0].choiceB
 questions[0].choiceC
@@ -139,13 +151,13 @@ function timeRender() {
     }
 }
 
-let Timer = setInterval(timeRender, 1000);
+var Timer = setInterval(timeRender, 1000);
 clearInterval(Timer);
 
 
 //Function to check answer & add to score
 function checkAnswer(answer) {
-    if (questions[currentQuestion].correct == answer) {
+    if (answer[currentQuestion].correct == answer) {
         score++;
         correctAnswer();
     } else {
@@ -173,7 +185,7 @@ function startQuiz() {
     quiz.style.display = "block";
 }
 
-
+//TODO:First Code ---------------------------------------------------------------------------
 
 //Countdown Timer Variable & the function/equation
 // function countdown() {
