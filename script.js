@@ -142,6 +142,7 @@ function timeRender() {
 let Timer = setInterval(timeRender, 1000);
 clearInterval(Timer);
 
+
 //Function to check answer & add to score
 function checkAnswer(answer) {
     if (questions[currentQuestion].correct == answer) {
@@ -162,6 +163,15 @@ function checkAnswer(answer) {
 
 //Function to start the quiz
 start.addEventListener("click", startQuiz);
+var Timer;
+
+function startQuiz() {
+    start.style.display = "none";
+    timeRender();
+    Timer = setInterval(timeRender, 1000);
+    renderQuestion();
+    quiz.style.display = "block";
+}
 
 
 
