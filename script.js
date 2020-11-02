@@ -22,6 +22,21 @@
 //Clicking on the "LEADERBOARD" will erase all the users scores & and their initials from the leaderboard
 
 
+//Variables from the new divs created in html
+startBtn.addEventListener("click", startQuiz);
+var start = document.getElementById("#start");
+var quiz = document.getElementById("#questcontainer");
+var question = document.getElementById("#question");
+var choiceA = document.getElementById("A")
+var choiceB = document.getElementById("B")
+var choiceC = document.getElementById("C")
+var choiceD = document.getElementById("D")
+
+
+//Function that lists all my questions and answers
+
+
+
 //My VARIABLES
 var score = 0;
 var index = 0;
@@ -107,7 +122,6 @@ var questFour = document.getElementById("#questionfour");
 var questFive = document.getElementById("#questionfive");
 var startBtn = document.getElementById("#start");
 
-startBtn.addEventListener("click", start);
 
 function start() {
     startPage.style.display = "none";
