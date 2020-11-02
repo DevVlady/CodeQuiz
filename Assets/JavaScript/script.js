@@ -59,7 +59,7 @@ startBtn.addEventListener("click", quizStarted);
 function renderQuestions () {
     var questionsLength = questions.length - 1;
     if (mainIndex <= questionsLength) {
-        document.getElementById("quest").innerHTML = questions[mainIndex];
+        document.getElementById("quest").innerHTML = questions[mainIndex].question;
         renderOptionChoices();
     }
     else {
@@ -82,6 +82,24 @@ function quizStarted () {
 
 console.log(quizStarted);
 
+//Function to display the list of questions
+function renderOptionChoices () {
+    let quest = questions[mainIndex].question;
+    // let quest = questions[mainIndex].choiceB;
+    // let quest = questions[mainIndex].choiceC;
+    // let quest = questions[mainIndex].choiceD;
+
+    for (var i = 0; i < questions.length; i++) {
+    var multiplechoiceOption = document.getElementById("multiplechoice");
+    var multiplechoiceBtns = document.createElement("button");
+
+    multiplechoiceBtns.innerHTML = quest[i];
+    multiplechoiceBtns.className = "btn btnOption btn-md btn-outline-secondary d-flex justify-content-around";
+    multiplechoiceBtns.setAttribute("onclick", "correctAnswer(" + mainIndex +", " + i + ");");
+    multiplechoiceOption.append(multiplechoiceBtns);
+    }
+    finishLine();
+}
 
 
 
@@ -153,12 +171,12 @@ let questions = [
 ];
 
 //Indexes
-// questions[0].question
-// answer[0].correct
-// questions[0].choiceA
-// questions[0].choiceB
-// questions[0].choiceC
-// questions[0].choiceD
+questions[0].question
+answer[0].correct
+questions[0].choiceA
+questions[0].choiceB
+questions[0].choiceC
+questions[0].choiceD
 
 
 //Question Render & Function
