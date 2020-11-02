@@ -45,17 +45,30 @@ function countdown() {
 
         if (seconds === 0) {
             clearInterval(timeEl);
-            alert("Times UP!");
+            // alert("Times UP!");
         }
     }, 1000);
 }
 
 countdown();
 
-
-
 //Event listener for the button/s
 startBtn.addEventListener("click", quizStarted);
+
+//Function to render the questions upon clicking the start button
+function renderQuestions () {
+    var questionsLength = questions.length - 1;
+    if (mainIndex <= questionsLength) {
+        document.getElementById("quest").innerHTML = questions[mainIndex];
+        renderOptionChoices();
+    }
+    else {
+        alert("The quiz has ended!");
+    }
+}
+
+console.log(renderQuestions);
+
 
 
 
