@@ -56,6 +56,7 @@ var track = localStorage.getItem("track");
 var highscorePage = document.getElementById("highscorespage");
 var goBackBtn = document.getElementById("goback");
 var clearBtn = document.getElementById("clear");
+var leaderBoardLink = document.getElementById("leaderboard");
 
 
 //Function that lists all my questions and answers
@@ -187,4 +188,14 @@ goBackBtn.addEventListener("click", goBack);
 function goBack () {
     highscorePage.style.display = "none";
     mainpageEl.style.display = "block";
+}
+
+//Add event listener for the leaderboard to display the highscores page.
+leaderBoardLink.addEventListener("click", displayScores);
+
+//Function to make the link for the leaderboard work upon click
+function displayScores () {
+    highscorePage.style.display = "block";
+    questionsEl.style.display = "none";
+    mainpageEl.style.display = "none";
 }
