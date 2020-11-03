@@ -126,6 +126,19 @@ function renderQuestions () {
     choiceB.innerHTML = collectedQ.b;
     choiceC.innerHTML = collectedQ.c;
     choiceD.innerHTML = collectedQ.d;
+    if (question === questionsIndex.length) {
+        timeEl.style.display = "none";
+        questionsEl.style.display = "block";
+        finishEl.style.display = "none";
+    }
+    else {
+        var collectedQ = questionsIndex[question];
+        questionTitle.innerHTML = collectedQ.qstn;
+        choiceA.innerHTML = collectedQ.a;
+        choiceB.innerHTML = collectedQ.b;
+        choiceC.innerHTML = collectedQ.c;
+        choiceD.innerHTML = collectedQ.d;
+    }
 }
 
 //Timer function
@@ -149,19 +162,13 @@ function correctAnswer(answer) {
         score += 10;
         question++;
         renderQuestions();
-
-        console.log(score);
+        // console.log(score);
     }
     else {
         // alert("incorrect");
         seconds = seconds -10;
         question++;
         renderQuestions();
-    }
-    if (question === questionsIndex.length -1) {
-        timeEl.style.display = "none";
-        questionsEl.style.display = "none";
-        finishEl.style.display = "block";
     }
 }
 
@@ -198,4 +205,5 @@ function displayScores () {
     highscorePage.style.display = "block";
     questionsEl.style.display = "none";
     mainpageEl.style.display = "none";
+    finishEl.style.display = "none;"
 }
