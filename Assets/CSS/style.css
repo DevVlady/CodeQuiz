@@ -61,7 +61,9 @@ input {
 #A,
 #B,
 #C,
-#D {
+#D,
+#goback,
+#clear {
     margin-left: 28%;
     margin-bottom: 5px;
     width: 40%;
