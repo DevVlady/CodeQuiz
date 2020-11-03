@@ -18,34 +18,49 @@ button {
     text-align: center;
     border-radius: 10px;
     display: list-item;
-    margin-left: -40px;
-    margin-bottom: 5px;
 }
 
 p {
     font-size: 25px;
-    margin-left: 80px;
-    margin-right: 100px;
-    text-align: center;
+    margin-left: 22%;
+    margin-right: 150px;
+    text-align: left;
 }
 
 h2 {
     font-size: 40px;
-    text-align: center;
-    margin-top: 400px;
+    text-align: left;
+    margin-top: 380px;
+    margin-left: 22%;
+    margin-right: 10%;
 }
 
 #go {
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    display: inline;
+    top: 50%;
+    margin-left: 47%;
     padding: 15px;
+}
+
+#submit {
+    top: 50%;
+    left: 45%;
+    padding: 15px;
+    display: inline-block;
+    align-self: auto;
 }
 
 input {
     padding: 10px;
-    margin-left: 210px;
-    overflow-wrap: break-word;
+    text-size-adjust: 50%;
+    font-size: 15pt;
+    width: 20%;
+    margin-left: 22%;
 }
 
+#A,
+#B,
+#C,
+#D {
+    margin-left: 235px;
+    margin-bottom: 5px;
+}

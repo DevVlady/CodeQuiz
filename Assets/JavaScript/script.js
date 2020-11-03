@@ -51,6 +51,7 @@ var choiceB = document.getElementById("B")
 var choiceC = document.getElementById("C")
 var choiceD = document.getElementById("D")
 var listEl = document.getElementById("list");
+var track = localStorage.getItem("track");
 
 
 //Function that lists all my questions and answers
@@ -80,7 +81,7 @@ let questionsIndex = [
         correct: "C"
     },
     {
-        qstn: "Which of the following cars are illegal in the USA?",
+        qstn: "What car in list below is illegal in the USA?",
         a: "Nissan GTR",
         b: "Alfa Romeo",
         c: "McLaren Senna",
@@ -139,18 +140,20 @@ countdown();
 //Check answer function
 function correctAnswer(answer) {
     if (answer == questionsIndex[question].correct) {
-        alert("correct");
+        // alert("correct");
         score++;
         question++;
         renderQuestions();
     }
     else {
-        alert("incorrect");
+        // alert("incorrect");
         question++;
         renderQuestions();
     }
     if (question == questionsIndex.length -1) {
         timeEl.style.display = "none";
+        questionsEl.style.display = "none";
+        finishEl.style.display = "block";
     }
 }
 
@@ -159,3 +162,5 @@ function scoreSheet () {
     questionsEl.style.display = "none";
     finishEl.style.display = "block";
 }
+
+//Function to add score to local storage
