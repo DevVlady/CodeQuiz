@@ -32,50 +32,80 @@ var mainIndex =0;
 var numQuestions = 5;
 var countdown;
 var question = 0;
+var timerInt = 0;
 
 //Variables obtained from html file
-var mainpageEl = document.getElementById("#mainpage");
-var goBtn = document.getElementById("#go");
-var timeEl = document.getElementById("#timer");
-var questionsEl = document.getElementById("#questions");
-var leaderboardEl = document.getElementById("#leaderboard");
-var finishEl = document.getElementById("#finish");
-var finalscoreEl = document.getElementById("#finalscore");
-var submitBtn = document.getElementById("#submit");
-var initialsEl = document.getElementById("#initials");
-var questionTitle = document.getElementById("#quest");
-var multchoiceEl = document.getElementById("#multiplechoice");
-var listEl = document.getElementById("#list");
+var mainpageEl = document.getElementById("mainpage");
+var goBtn = document.getElementById("go");
+var timeEl = document.getElementById("timer");
+var questionsEl = document.getElementById("questions");
+var leaderboardEl = document.getElementById("leaderboard");
+var finishEl = document.getElementById("finish");
+var finalscoreEl = document.getElementById("finalscore");
+var submitBtn = document.getElementById("submit");
+var initialsEl = document.getElementById("initials");
+var questionTitle = document.getElementById("quest");
+var multchoiceEl = document.getElementById("multiplechoice");
+var choiceA = document.getElementById("A")
+var choiceB = document.getElementById("B")
+var choiceC = document.getElementById("C")
+var choiceD = document.getElementById("D")
+var listEl = document.getElementById("list");
 
 
 //Function that lists all my questions and answers
 let questionsIndex = [
     {
         qstn: "DB9 is a model of what car make?",
-        choices: ["Ferrari", "Bentley", "Aston Martin", "Rolls Royce"],
-        correct: "C",
+        a: "Ferrari",
+        b: "Bentley",
+        c: "Aston Martin",
+        d: "Rolls Royce",
+        correct: "c"
     },
     {
         qstn: "What is the most expensive American car ever sold?",
-        choices: ["Shelby GT 500", "Shelby Cobra", "Shelby Mustang", "Crown Victoria"],
-        correct: "B",
+        a: "Shelby GT 500",
+        b: "Shelby Cobra",
+        c: "Shelby Mustang",
+        d: "Crown Victoria",
+        correct: "b"
     },
     {
         qstn: "How much horsepower is in a Bugatti Veyron?",
-        choices: ["800", "400", "1000", "700"],
-        correct: "C"
+        a: "800",
+        b: "400",
+        c: "1000",
+        d: "700",
+        correct: "c"
     },
     {
         qstn: "Which of the following cars are illegal in the USA?",
-        choices: ["Nissan GTR", "Alfa Romeo", "McLaren Senna", "Nissan Skyline"],
-        correct: "D"
+        a: "Nissan GTR",
+        b: "Alfa Romeo",
+        c: "McLaren Senna",
+        d: "Nissan Skyline",
+        correct: "d"
     },
     {
         qstn: "What size engine is in a Bugatti Veyron?",
-        choices: ["8.0L V12", "8.0L V14", "10.0L V16", "8.0L V16"],
-        correct: "D"
+        a: "8.0L V12",
+        b: "8.0L V14",
+        c: "10.0L V16",
+        d: "8.0L V16",
+        correct: "d"
     }
 ];
+
+//Function to render the questions upon clicking the start button
+function renderQuestions () {
+    var collectedQ = questionsIndex[question];
+    questionTitle.innerHTML = collectedQ.qstn;
+    choiceA.innerHTML = collectedQ.a;
+    choiceB.innerHTML = collectedQ.b;
+    choiceC.innerHTML = collectedQ.c;
+    choiceD.innerHTML = collectedQ.d;
+}
 
 //Event listener for the button/s
 goBtn.addEventListener("click", quizStarted);
@@ -83,11 +113,11 @@ goBtn.addEventListener("click", quizStarted);
 //Function to begin the quiz upon clicking start
 function quizStarted () {
     mainpageEl.style.display = "none";
+    renderQuestions();
     questionsEl.style.display = "block";
 
     //Adding the countdown upon clicking start
     countdown();
-    renderQuestions();
 }
 
 
@@ -106,9 +136,3 @@ function countdown() {
 
 countdown();
 
-//Function to render the questions upon clicking the start button
-function renderQuestions () {
-//     var questionsEl = document.getElementById("#questions");
-//     let queTag = "<span>" + questionsIndex[i].qstn + "</span>";
-//     questionsEl.innerHTML = queTag;
-// }
