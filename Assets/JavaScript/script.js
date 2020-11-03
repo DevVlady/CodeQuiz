@@ -120,12 +120,6 @@ function quizStarted () {
 
 //Function to render the questions upon clicking the start button
 function renderQuestions () {
-    var collectedQ = questionsIndex[question];
-    questionTitle.innerHTML = collectedQ.qstn;
-    choiceA.innerHTML = collectedQ.a;
-    choiceB.innerHTML = collectedQ.b;
-    choiceC.innerHTML = collectedQ.c;
-    choiceD.innerHTML = collectedQ.d;
     if (question === questionsIndex.length) {
         timeEl.style.display = "none";
         questionsEl.style.display = "none";
@@ -206,5 +200,5 @@ function displayScores () {
     highscorePage.style.display = "block";
     questionsEl.style.display = "none";
     mainpageEl.style.display = "none";
-    finishEl.style.display = "none;"
+    finishEl.style.display = "none";
 }
