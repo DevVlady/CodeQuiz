@@ -54,6 +54,8 @@ var choiceD = document.getElementById("D")
 var listEl = document.getElementById("list");
 var track = localStorage.getItem("track");
 var highscorePage = document.getElementById("highscorespage");
+var goBackBtn = document.getElementById("goback");
+var clearBtn = document.getElementById("clear");
 
 
 //Function that lists all my questions and answers
@@ -121,7 +123,6 @@ function quizStarted () {
 
     //Adding the countdown upon clicking start
 
-    quizTimer = setInterval(countdown, 1000);
 }
 
 
@@ -153,7 +154,7 @@ function correctAnswer(answer) {
         question++;
         renderQuestions();
     }
-    if (question == questionsIndex.length -1) {
+    if (question === questionsIndex.length -1) {
         timeEl.style.display = "none";
         questionsEl.style.display = "none";
         finishEl.style.display = "block";
@@ -174,4 +175,13 @@ submitBtn.addEventListener("click", scorePage);
 function scorePage () {
     finishEl.style.display = "none";
     highscorePage.style.display = "block";
+}
+
+//Function for the go back button
+goBackBtn.addEventListener("click", goBack);
+
+//Function to begin the quiz upon clicking start
+function goBack () {
+    highscorePage.style.display = "none";
+    mainpageEl.style.display = "block";
 }
