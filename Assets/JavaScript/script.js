@@ -78,7 +78,7 @@ let questionsIndex = [
 ];
 
 //Event listener for the button/s
-goBtn.addEventListener("click", quizStarted);
+// goBtn.addEventListener("click", quizStarted);
 
 //Function to begin the quiz upon clicking start
 function quizStarted () {
@@ -99,14 +99,13 @@ function countdown() {
 
         if (seconds === 0) {
             clearInterval(timerInt);
-            // alert("Times UP!");
+            alert("Times UP!");
         }
     }, 1000);
 }
 
 countdown();
-
 //Function to render the questions upon clicking the start button
-function renderQuestions () {
-    
-}
+// function renderQuestions () {
+
+// }
