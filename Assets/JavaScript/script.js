@@ -52,6 +52,7 @@ var choiceC = document.getElementById("C")
 var choiceD = document.getElementById("D")
 var listEl = document.getElementById("list");
 var track = localStorage.getItem("track");
+var highscorePage = document.getElementById("highscorespage");
 
 
 //Function that lists all my questions and answers
@@ -163,4 +164,12 @@ function scoreSheet () {
     finishEl.style.display = "block";
 }
 
+//Add event listener for submit button
+submitBtn.addEventListener("click", scorePage);
+
+
 //Function to add score to local storage
+function scorePage () {
+    finishEl.style.display = "none";
+    highscorePage.style.display = "block";
+}
