@@ -102,16 +102,6 @@ let questionsIndex = [
     }
 ];
 
-//Function to render the questions upon clicking the start button
-function renderQuestions () {
-    var collectedQ = questionsIndex[question];
-    questionTitle.innerHTML = collectedQ.qstn;
-    choiceA.innerHTML = collectedQ.a;
-    choiceB.innerHTML = collectedQ.b;
-    choiceC.innerHTML = collectedQ.c;
-    choiceD.innerHTML = collectedQ.d;
-}
-
 //Event listener for the button/s
 goBtn.addEventListener("click", quizStarted);
 
@@ -122,9 +112,20 @@ function quizStarted () {
     questionsEl.style.display = "block";
 
     //Adding the countdown upon clicking start
-
+    countdown();
+    renderQuestions();
 }
 
+
+//Function to render the questions upon clicking the start button
+function renderQuestions () {
+    var collectedQ = questionsIndex[question];
+    questionTitle.innerHTML = collectedQ.qstn;
+    choiceA.innerHTML = collectedQ.a;
+    choiceB.innerHTML = collectedQ.b;
+    choiceC.innerHTML = collectedQ.c;
+    choiceD.innerHTML = collectedQ.d;
+}
 
 //Timer function
 function countdown() {
@@ -139,7 +140,6 @@ function countdown() {
     }, 1000);
 }
 
-countdown();
 
 //Check answer function
 function correctAnswer(answer) {
@@ -153,6 +153,7 @@ function correctAnswer(answer) {
     }
     else {
         // alert("incorrect");
+        seconds = seconds -10;
         question++;
         renderQuestions();
     }
