@@ -108,12 +108,5 @@ countdown();
 
 //Function to render the questions upon clicking the start button
 function renderQuestions () {
-    var questionsLength = questions.length - 1;
-    if (mainIndex <= questionsLength) {
-        document.getElementById("quest").innerHTML = questions[mainIndex].question;
-        renderOptionChoices();
-    }
-    else {
-        alert("The quiz has ended!");
-    }
+    
 }
