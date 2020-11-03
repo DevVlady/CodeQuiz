@@ -33,6 +33,7 @@ var numQuestions = 5;
 var countdown;
 var question = 0;
 var timerInt = 0;
+var quizTimer;
 
 //Variables obtained from html file
 var mainpageEl = document.getElementById("mainpage");
@@ -119,7 +120,8 @@ function quizStarted () {
     questionsEl.style.display = "block";
 
     //Adding the countdown upon clicking start
-    countdown();
+
+    quizTimer = setInterval(countdown, 1000);
 }
 
 
