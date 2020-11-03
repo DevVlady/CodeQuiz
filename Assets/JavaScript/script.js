@@ -145,9 +145,11 @@ countdown();
 function correctAnswer(answer) {
     if (answer == questionsIndex[question].correct) {
         // alert("correct");
-        score++;
+        score += 10;
         question++;
         renderQuestions();
+
+        console.log(score);
     }
     else {
         // alert("incorrect");
