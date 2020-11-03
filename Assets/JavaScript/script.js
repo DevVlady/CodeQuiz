@@ -131,7 +131,7 @@ function renderQuestions () {
 function countdown() {
     var timerInt = setInterval(function() {
         seconds--;
-        timeEl.textContent = "Timer " + seconds;
+        timeEl.textContent = "Timer: " + seconds;
 
         if (seconds === 0) {
             clearInterval(timerInt);
