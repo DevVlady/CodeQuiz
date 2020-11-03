@@ -22,23 +22,24 @@ button {
 
 p {
     font-size: 25px;
-    margin-left: 22%;
-    margin-right: 150px;
-    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
 }
 
 h2 {
     font-size: 40px;
-    text-align: left;
+    text-align: center;
     margin-top: 380px;
-    margin-left: 22%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 #go {
     top: 50%;
-    margin-left: 47%;
+    margin-left: 35%;
     padding: 15px;
+    width: 30%;
 }
 
 #submit {
@@ -54,13 +55,14 @@ input {
     text-size-adjust: 50%;
     font-size: 15pt;
     width: 20%;
-    margin-left: 22%;
+    margin-left: 37%;
 }
 
 #A,
 #B,
 #C,
 #D {
-    margin-left: 235px;
+    margin-left: 28%;
     margin-bottom: 5px;
+    width: 40%;
 }
