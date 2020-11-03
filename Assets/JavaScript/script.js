@@ -128,8 +128,8 @@ function renderQuestions () {
     choiceD.innerHTML = collectedQ.d;
     if (question === questionsIndex.length) {
         timeEl.style.display = "none";
-        questionsEl.style.display = "block";
-        finishEl.style.display = "none";
+        questionsEl.style.display = "none";
+        finishEl.style.display = "block";
     }
     else {
         var collectedQ = questionsIndex[question];
@@ -158,19 +158,20 @@ function countdown() {
 //Check answer function
 function correctAnswer(answer) {
     if (answer == questionsIndex[question].correct) {
-        // alert("correct");
         score += 10;
         question++;
         renderQuestions();
         // console.log(score);
+        console.log(answer)
+
     }
     else {
-        // alert("incorrect");
         seconds = seconds -10;
         question++;
         renderQuestions();
     }
 }
+
 
 //Function to display scorescreen
 function scoreSheet () {
