@@ -61,7 +61,7 @@ let questionsIndex = [
         b: "Bentley",
         c: "Aston Martin",
         d: "Rolls Royce",
-        correct: "c"
+        correct: "C"
     },
     {
         qstn: "What is the most expensive American car ever sold?",
@@ -69,7 +69,7 @@ let questionsIndex = [
         b: "Shelby Cobra",
         c: "Shelby Mustang",
         d: "Crown Victoria",
-        correct: "b"
+        correct: "B"
     },
     {
         qstn: "How much horsepower is in a Bugatti Veyron?",
@@ -77,7 +77,7 @@ let questionsIndex = [
         b: "400",
         c: "1000",
         d: "700",
-        correct: "c"
+        correct: "C"
     },
     {
         qstn: "Which of the following cars are illegal in the USA?",
@@ -85,7 +85,7 @@ let questionsIndex = [
         b: "Alfa Romeo",
         c: "McLaren Senna",
         d: "Nissan Skyline",
-        correct: "d"
+        correct: "D"
     },
     {
         qstn: "What size engine is in a Bugatti Veyron?",
@@ -93,7 +93,7 @@ let questionsIndex = [
         b: "8.0L V14",
         c: "10.0L V16",
         d: "8.0L V16",
-        correct: "d"
+        correct: "D"
     }
 ];
 
@@ -136,3 +136,20 @@ function countdown() {
 
 countdown();
 
+//Check answer function
+function correctAnswer(answer) {
+    if (answer == questionsIndex[question].correct) {
+        alert("correct");
+        score++;
+        question++;
+        renderQuestions();
+    }
+    else {
+        alert("incorrect");
+        question++;
+        renderQuestions();
+    }
+    if (question == questionsIndex.length -1) {
+        timeEl.style.display = "none";
+    }
+}
