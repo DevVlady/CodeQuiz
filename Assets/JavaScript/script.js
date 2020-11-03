@@ -43,32 +43,35 @@ var finishEl = document.getElementById("#finish");
 var finalscoreEl = document.getElementById("#finalscore");
 var submitBtn = document.getElementById("#submit");
 var initialsEl = document.getElementById("#initials");
+var questionTitle = document.getElementById("#quest");
+var multchoiceEl = document.getElementById("#multiplechoice");
+var listEl = document.getElementById("#list");
 
 
 //Function that lists all my questions and answers
-let questions = [
+let questionsIndex = [
     {
-        question: "DB9 is a model of what car make?",
+        qstn: "DB9 is a model of what car make?",
         choices: ["Ferrari", "Bentley", "Aston Martin", "Rolls Royce"],
         correct: "C",
     },
     {
-        question: "What is the most expensive American car ever sold?",
+        qstn: "What is the most expensive American car ever sold?",
         choices: ["Shelby GT 500", "Shelby Cobra", "Shelby Mustang", "Crown Victoria"],
         correct: "B",
     },
     {
-        question: "How much horsepower is in a Bugatti Veyron?",
+        qstn: "How much horsepower is in a Bugatti Veyron?",
         choices: ["800", "400", "1000", "700"],
         correct: "C"
     },
     {
-        question: "Which of the following cars are illegal in the USA?",
+        qstn: "Which of the following cars are illegal in the USA?",
         choices: ["Nissan GTR", "Alfa Romeo", "McLaren Senna", "Nissan Skyline"],
         correct: "D"
     },
     {
-        question: "What size engine is in a Bugatti Veyron?",
+        qstn: "What size engine is in a Bugatti Veyron?",
         choices: ["8.0L V12", "8.0L V14", "10.0L V16", "8.0L V16"],
         correct: "D"
     }
@@ -86,11 +89,6 @@ function quizStarted () {
     countdown();
     renderQuestions();
 }
-
-
-
-
-
 
 
 //Timer function
