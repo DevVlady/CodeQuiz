@@ -153,3 +153,9 @@ function correctAnswer(answer) {
         timeEl.style.display = "none";
     }
 }
+
+//Function to display scorescreen
+function scoreSheet () {
+    questionsEl.style.display = "none";
+    finishEl.style.display = "block";
+}
