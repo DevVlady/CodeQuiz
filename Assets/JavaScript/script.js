@@ -9,10 +9,10 @@
 //Each correct answer will add 1 point to the users scoresheet
 //Right or wrong alert will be displayed when the user selects an answer
 //A loop will be created where this will happen 5 times
-//On the final page text will be desplayed letting the user know the quiz is complete
+//On the final page text will be displayed letting the user know the quiz is complete
 //On the 2nd to last page the user will have a screen displayed letting the user know the quiz is complete
 //The user will have an input provided where they will be asked to input their initials
-//Once the user neters their initials they will have a submit button they will need to click to continue
+//Once the user users their initials they will have a submit button they will need to click to continue
 //The timer will be stopped on the 2nd to last page
 //Once the user hits submit button they will be taken to the next page which will display the scores & initials of the the users
 //This page will only display the text "Lederboard"
