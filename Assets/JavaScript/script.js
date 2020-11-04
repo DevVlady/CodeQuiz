@@ -124,6 +124,7 @@ function renderQuestions () {
         timeEl.style.display = "none";
         questionsEl.style.display = "none";
         finishEl.style.display = "block";
+        question = 0;
     }
     else {
         var collectedQ = questionsIndex[question];
@@ -144,7 +145,6 @@ function countdown() {
         if (seconds <= 0) {
             alert("Times UP!");
             clearInterval(timerInt);
-
         }
     }, 1000);
 }
@@ -202,4 +202,5 @@ function displayScores () {
     questionsEl.style.display = "none";
     mainpageEl.style.display = "none";
     finishEl.style.display = "none";
+
 }
