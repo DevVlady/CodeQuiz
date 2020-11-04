@@ -109,7 +109,7 @@ goBtn.addEventListener("click", quizStarted);
 //Function to begin the quiz upon clicking start
 function quizStarted () {
     mainpageEl.style.display = "none";
-    renderQuestions();
+    // renderQuestions();
     questionsEl.style.display = "block";
 
     //Adding the countdown upon clicking start
@@ -141,9 +141,10 @@ function countdown() {
         seconds--;
         timeEl.textContent = "Timer: " + seconds;
 
-        if (seconds === 0) {
-            clearInterval(timerInt);
+        if (seconds <= 0) {
             alert("Times UP!");
+            clearInterval(timerInt);
+
         }
     }, 1000);
 }
@@ -155,7 +156,7 @@ function correctAnswer(answer) {
         score += 10;
         question++;
         renderQuestions();
-        // console.log(score);
+        console.log(score);
         console.log(answer)
 
     }
