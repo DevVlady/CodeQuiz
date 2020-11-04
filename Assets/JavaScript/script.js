@@ -109,13 +109,12 @@ goBtn.addEventListener("click", quizStarted);
 //Function to begin the quiz upon clicking start
 function quizStarted () {
     mainpageEl.style.display = "none";
-    // renderQuestions();
     questionsEl.style.display = "block";
 
-    //Adding the countdown upon clicking start
     countdown();
     renderQuestions();
 }
+
 
 
 //Function to render the questions upon clicking the start button
@@ -136,6 +135,7 @@ function renderQuestions () {
     }
 }
 
+
 //Timer function
 function countdown() {
     var timerInt = setInterval(function() {
@@ -150,14 +150,13 @@ function countdown() {
 }
 
 
+
 //Check answer function
 function correctAnswer(answer) {
     if (answer == questionsIndex[question].correct) {
         score += 10;
         question++;
         renderQuestions();
-        console.log(score);
-        console.log(answer)
 
     }
     else {
@@ -168,11 +167,13 @@ function correctAnswer(answer) {
 }
 
 
+
 //Function to display scorescreen
 function scoreSheet () {
     questionsEl.style.display = "none";
     finishEl.style.display = "block";
 }
+
 
 //Add event listener for submit button
 submitBtn.addEventListener("click", scorePage);
@@ -185,8 +186,9 @@ function scorePage () {
     var p = document.createElement("p");
     p.innerText = score;
     highscorePage.appendChild(p);
-
 }
+
+
 
 //Function for the go back button
 goBackBtn.addEventListener("click", goBack);
@@ -196,6 +198,8 @@ function goBack () {
     highscorePage.style.display = "none";
     mainpageEl.style.display = "block";
 }
+console.log(goBack);
+
 
 //Add event listener for the leaderboard to display the highscores page.
 leaderBoardLink.addEventListener("click", displayScores);
@@ -206,5 +210,13 @@ function displayScores () {
     questionsEl.style.display = "none";
     mainpageEl.style.display = "none";
     finishEl.style.display = "none";
+}
+console.log(displayScores);
+
+
+//Scores function & local storage
+var collectedScore = JSON.parse(localStorage.getItem("scoresObj"));
+
+if (collectedScore) {
 
 }
