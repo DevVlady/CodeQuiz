@@ -182,6 +182,10 @@ submitBtn.addEventListener("click", scorePage);
 function scorePage () {
     finishEl.style.display = "none";
     highscorePage.style.display = "block";
+    var p = document.createElement("p");
+    p.innerText = score;
+    highscorePage.appendChild(p);
+
 }
 
 //Function for the go back button
