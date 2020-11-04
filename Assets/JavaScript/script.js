@@ -198,7 +198,6 @@ function goBack () {
     highscorePage.style.display = "none";
     mainpageEl.style.display = "block";
 }
-console.log(goBack);
 
 
 //Add event listener for the leaderboard to display the highscores page.
@@ -211,12 +210,22 @@ function displayScores () {
     mainpageEl.style.display = "none";
     finishEl.style.display = "none";
 }
-console.log(displayScores);
 
 
 //Scores function & local storage
 var collectedScore = JSON.parse(localStorage.getItem("scoresObj"));
 
 if (collectedScore) {
+
+}
+
+
+function getInputValue(){
+    // Selecting the input element and get its value
+    var inputVal = document.getElementById("initials").value;
+
+    var p = document.createElement("p");
+    p.innerText = inputVal + score;
+    highscorePage.appendChild(p);
 
 }
