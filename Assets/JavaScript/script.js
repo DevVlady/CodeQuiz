@@ -183,9 +183,6 @@ submitBtn.addEventListener("click", scorePage);
 function scorePage () {
     finishEl.style.display = "none";
     highscorePage.style.display = "block";
-    var p = document.createElement("p");
-    p.innerText = score;
-    highscorePage.appendChild(p);
 }
 
 
@@ -221,11 +218,9 @@ if (collectedScore) {
 
 
 function getInputValue(){
-    // Selecting the input element and get its value
     var inputVal = document.getElementById("initials").value;
 
     var p = document.createElement("p");
     p.innerText = inputVal + score;
     highscorePage.appendChild(p);
-
 }
