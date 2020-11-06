@@ -32,7 +32,7 @@ var mainIndex =0;
 var numQuestions = 5;
 var countdown;
 var question = 0;
-var timerInt = 0;
+var timerInt;
 var quizTimer;
 
 //Variables obtained from html file
@@ -108,8 +108,10 @@ goBtn.addEventListener("click", quizStarted);
 
 //Function to begin the quiz upon clicking start
 function quizStarted () {
+    seconds = 60;
     mainpageEl.style.display = "none";
     questionsEl.style.display = "block";
+    timeEl.style.display = "block"
 
     countdown();
     renderQuestions();
@@ -120,6 +122,7 @@ function quizStarted () {
 //Function to render the questions upon clicking the start button
 function renderQuestions () {
     if (question === questionsIndex.length) {
+        clearInterval(timerInt);
         timeEl.style.display = "none";
         questionsEl.style.display = "none";
         finishEl.style.display = "block";
@@ -136,18 +139,24 @@ function renderQuestions () {
 }
 
 
-//Timer function
+//Timer function & variable
 function countdown() {
-    var timerInt = setInterval(function() {
+    timerInt = setInterval(function() {
         seconds--;
         timeEl.textContent = "Timer: " + seconds;
+
 
         if (seconds <= 0) {
             alert("Times UP!");
             clearInterval(timerInt);
+            timeEl.textContent = "Timer: " + seconds;
         }
     }, 1000);
 }
+
+
+//Function to start and stop timer end & beginning of the quiz
+
 
 
 
@@ -210,11 +219,11 @@ function displayScores () {
 
 
 //Scores function & local storage
-var collectedScore = JSON.parse(localStorage.getItem("scoresObj"));
+// var collectedScore = JSON.parse(localStorage.getItem("score"));
 
-if (collectedScore) {
+// if (collectedScore) {
 
-}
+// }
 
 
 function getInputValue(){
@@ -224,3 +233,31 @@ function getInputValue(){
     p.innerText = inputVal + score;
     highscorePage.appendChild(p);
 }
+
+// function getInputValue(){
+//     var recentScore = {
+//         initials: initialsEl.value,
+//         score: score,
+//     }
+//     collectedScore.push
+//     localStorage.setItem("collectedScore", JSON.stringify(collectedScore));
+
+
+//     var inputVal = document.getElementById("initials").value;
+
+//     //Scores function & local storage
+//     var collectedScore = JSON.parse(localStorage.getItem("score")) || [];
+
+
+
+
+
+//     for (var i = 0; i < collectedScore.length; i++) {
+//         var p = document.createElement("p");
+//         p.innerText = inputVal + score;
+//         highscorePage.appendChild(p);
+//     }
+
+
+
+// }
