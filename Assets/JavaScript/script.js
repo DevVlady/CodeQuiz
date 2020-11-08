@@ -155,11 +155,6 @@ function countdown() {
 }
 
 
-//Function to start and stop timer end & beginning of the quiz
-
-
-
-
 //Check answer function
 function correctAnswer(answer) {
     if (answer == questionsIndex[question].correct) {
@@ -205,6 +200,12 @@ function goBack () {
     mainpageEl.style.display = "block";
 }
 
+//Event listener to clear the scores from the page
+clearBtn.addEventListener("click", function(){
+    localStorage.clear();
+});
+
+
 
 //Add event listener for the leaderboard to display the highscores page.
 leaderBoardLink.addEventListener("click", displayScores);
@@ -216,14 +217,6 @@ function displayScores () {
     mainpageEl.style.display = "none";
     finishEl.style.display = "none";
 }
-
-
-//Scores function & local storage
-// var collectedScore = JSON.parse(localStorage.getItem("score"));
-
-// if (collectedScore) {
-
-// }
 
 
 function getInputValue(){
