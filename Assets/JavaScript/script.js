@@ -230,7 +230,7 @@ function getInputValue(){
     var inputVal = document.getElementById("initials").value;
 
     var p = document.createElement("p");
-    p.innerText = inputVal + score;
+    p.innerText = inputVal + ' ' + score;
     highscorePage.appendChild(p);
 }
 
