@@ -16,4 +16,4 @@ Included in this project:
 Programming languages used in this project are: HTML5, CSS3, & JavaScript.
 
 ![image](https://user-images.githubusercontent.com/71519918/98501160-0bf18500-2214-11eb-8d68-5400780c5b7b.png)
->>>>>>> 10b2e239593874e1483cc466f999ea6c34012d8a
+
